@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AUREN Beauty | Експертна грижа за кожата във Враца</title>
+  <meta name="description" content="AUREN Beauty – козметичен салон във Враца с персонален подход. Skin Check анализ, кислородна и хидро терапия, лечение на акне и неинвазивен лифтинг Face Contour Architect." />
+
+  <style>
+    :root{
+      --accent:#b98a73;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#fbf7f5;
+      --maxw:1100px;
+      --radius:12px;
+      --shadow:0 6px 20px rgba(16,24,40,.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);
+      color:#111;
+      line-height:1.6;
+    }
+    .container{
+      max-width:var(--maxw);
+      margin:32px auto;
+      padding:24px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:34px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,#fdebd8,#f7c9ba);
+      display:grid;place-items:center;
+      font-weight:800;color:#5a2b1f;
+      flex:0 0 auto;
+    }
+    .brand-title{ font-weight:800; }
+    .brand-sub{ font-size:12px; color:var(--muted); }
+
+    nav{
+      display:flex;
+      gap:18px;
+      font-weight:600;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:6px 0;
+    }
+    nav a:hover{ color:#111; }
+
+    .hero{
+      margin-bottom:44px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(16,24,40,.06);
+    }
+    h1{
+      font-size:clamp(1.9rem, 3vw, 2.6rem);
+      margin:0 0 10px;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      max-width:78ch;
+      font-size:1.05rem;
+    }
+    .inline-links{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      align-items:center;
+    }
+    .inline-links a{
+      font-weight:600;
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    h2{
+      margin:0 0 14px;
+      font-size:1.35rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+    }
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card h3{ margin:0 0 8px; }
+    .card p{ margin:0; color:var(--muted); }
+    .card a{
+      display:inline-block;
+      margin-top:12px;
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .cta-row{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+    }
+    .cta{
+      display:inline-block;
+      padding:12px 18px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+    }
+    .cta.secondary{
+      background:#111;
+    }
+
+    .contact{
+      margin-top:48px;
+      padding-top:18px;
+      border-top:1px solid rgba(16,24,40,.06);
+    }
+
+    footer{
+      margin-top:44px;
+      padding-top:18px;
+      border-top:1px solid rgba(16,24,40,.06);
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:.9rem;
+    }
+
+    @media (max-width:720px){
+      header{ align-items:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">A</div>
+        <div style="min-width:0">
+          <div class="brand-title">AUREN Beauty</div>
+          <div class="brand-sub">Козметичен салон • Враца</div>
+        </div>
+      </div>
+
+      <nav aria-label="Главно меню">
+        <a href="index.html">Начало</a>
+        <a href="services.html">Процедури</a>
+        <a href="#contact">Консултация</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Експертна грижа за кожата с персонален подход във Враца</h1>
+      <p class="lead">
+        В AUREN Beauty започваме с анализ и индивидуален план – комбинираме модерни технологии,
+        професионална подготовка и внимателна грижа, за да постигнем реални, видими и проследими резултати.
+        Нашият фокус не е “една процедура”, а устойчиво подобрение и баланс на кожата.
+      </p>
+
+      <div class="inline-links" aria-label="Бързи връзки">
+        <a href="alternativa-na-botox-vratsa.html">Алтернатива на ботокс без игли →</a>
+        <a href="kozmetik-vratsa.html">Търсите козметик във Враца? →</a>
+        <a href="lechenie-na-akne-vraca.html">Лечение на акне във Враца →</a>
+      </div>
+
+      <div class="cta-row">
+        <a class="cta" href="services.html">Виж всички процедури</a>
+        <a class="cta secondary" href="#contact">Запази консултация</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="core">
+      <h2 id="core">Основни терапии</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Skin Check – Анализ на кожата</h3>
+          <p>Оценка на състоянието на кожата и проследяване на резултатите във времето.</p>
+          <a href="skincheck-analiz-na-kozha.html">Научи повече</a>
+        </article>
+
+        <article class="card">
+          <h3>Кислородна и хидро терапия</h3>
+          <p>Дълбоко почистване, хидратация и изсветляване на тена. Подходяща за всеки тип кожа.</p>
+          <a href="kislorodna-hidroterapiya.html">Научи повече</a>
+        </article>
+
+        <article class="card">
+          <h3>Face Contour Architect</h3>
+          <p>EMS + RF лифтинг – неинвазивна алтернатива на ботокс. Препоръчителен курс от 6 процедури.</p>
+          <a href="face-contour-architect.html">Научи повече</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Запази консултация</h2>
+      <p class="lead">
+        Свържи се с нас за професионална оценка и индивидуален план. Работим с клиенти от Враца и района.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="tel:+359880000000">📞 +359 88 000 0000</a>
+        <a class="cta secondary" href="services.html">Избери процедура</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© AUREN Beauty — Всички права запазени</div>
+      <div>Враца • <a href="tel:+359880000000" style="color:inherit;text-decoration:none">+359 88 000 0000</a></div>
+    </footer>
+
+  </div>
+</body>
+</html>

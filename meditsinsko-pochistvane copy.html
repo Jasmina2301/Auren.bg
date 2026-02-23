@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Медицинско почистване на лице | AUREN Beauty</title>
+    <meta name="description" content="Професионално медицинско почистване на лице в AUREN Beauty. Дълбоко почистване, балансиране на себума и видимо по-чиста кожа." />
+
+    <style>
+        :root{
+            --bg:#ffffff;
+            --muted:#6b7280;
+            --accent:#b98a73;
+            --card:#fbf7f5;
+            --maxw:1100px;
+            --radius:12px;
+            --shadow:0 6px 20px rgba(16,24,40,.08);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        *{box-sizing:border-box}
+
+        body{
+            margin:0;
+            background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);
+            color:#111;
+            line-height:1.5;
+        }
+
+        .container{
+            max-width:var(--maxw);
+            margin:32px auto;
+            padding:24px;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:24px;
+            margin-bottom:28px;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .logo{
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background:linear-gradient(135deg,#fdebd8,#f7c9ba);
+            display:grid;
+            place-items:center;
+            font-weight:800;
+            color:#5a2b1f;
+        }
+
+        nav{
+            display:flex;
+            gap:18px;
+            font-weight:600;
+        }
+
+        nav a{
+            color:var(--muted);
+            text-decoration:none;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 320px;
+            gap:28px;
+            align-items:start;
+        }
+
+        h1{
+            font-size:28px;
+            margin:0 0 8px 0;
+            line-height:1.15;
+        }
+
+        .lead{
+            color:var(--muted);
+            margin:0 0 20px 0;
+        }
+
+        .card{
+            background:var(--card);
+            padding:18px;
+            border-radius:var(--radius);
+            box-shadow:var(--shadow);
+        }
+
+        .hero{
+            display:flex;
+            gap:18px;
+            align-items:flex-start;
+            margin-bottom:20px;
+        }
+
+        .visual{
+            width:180px;
+            height:120px;
+            background:linear-gradient(135deg,#fff0ee,#fff7f6);
+            border-radius:10px;
+            flex-shrink:0;
+            display:grid;
+            place-items:center;
+            color:#7a3a2b;
+            font-weight:700;
+        }
+
+        .benefits{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:12px;
+            margin-top:12px;
+        }
+
+        .benefit{
+            background:white;
+            padding:12px;
+            border-radius:10px;
+            border:1px solid #f3eaea;
+            font-size:14px;
+            color:var(--muted);
+        }
+
+        .sidebar{
+            position:sticky;
+            top:28px;
+            align-self:start;
+        }
+
+        .price{
+            font-size:20px;
+            font-weight:700;
+            color:#4b2a22;
+            margin:8px 0 12px 0;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--accent);
+            color:white;
+            padding:12px 16px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:700;
+            box-shadow:0 6px 18px rgba(185,138,115,0.18);
+            border:none;
+            cursor:pointer;
+        }
+
+        .meta{
+            display:flex;
+            gap:12px;
+            color:var(--muted);
+            font-size:13px;
+            margin-top:12px;
+        }
+
+        section{
+            margin-bottom:18px;
+        }
+
+        ul{
+            padding-left:20px;
+            margin:8px 0;
+        }
+
+        .faq summary{
+            cursor:pointer;
+            font-weight:700;
+            margin-bottom:6px;
+        }
+
+        footer{
+            border-top:1px solid #f2ecea;
+            margin-top:32px;
+            padding-top:18px;
+            color:var(--muted);
+            font-size:13px;
+            text-align:center;
+        }
+
+        @media (max-width:880px){
+            .grid{grid-template-columns:1fr;}
+            .hero{flex-direction:row}
+            .visual{width:120px;height:88px}
+            .sidebar{position:static}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">A</div>
+                <div>
+                    <div style="font-weight:800">AUREN Beauty</div>
+                    <div style="font-size:13px;color:var(--muted)">Професионална грижа за кожата</div>
+                </div>
+            </div>
+
+            <nav aria-label="Главно меню">
+    <a href="index.html">Начало</a>
+    <a href="services.html">Процедури</a>
+    <a href="index.html#contact">Запази консултация</a>
+</nav>
+
+        </header>
+
+        <main class="grid">
+            <div>
+                <section class="card">
+                    <div class="hero">
+                        <div class="visual">Лице</div>
+                        <div style="flex:1">
+                            <h1>Медицинско почистване на лице</h1>
+                            <p class="lead">Дълбоко и безопасно почистване, подходящо за мазна, комбинирана и проблемна кожа. Премахва комедони, регулира себума и подготвя кожата за последващи терапевтични грижи.</p>
+
+                            <div class="benefits" aria-hidden="false">
+                                <div class="benefit">Професионална дерматологична методика</div>
+                                <div class="benefit">Антибактериално и деликатно</div>
+                                <div class="benefit">Намалява възпаления и черни точки</div>
+                                <div class="benefit">Персонализирана следгрижа</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section id="uslugi">
+                        <h2 style="margin:12px 0 8px 0;font-size:18px">Как протича процедурата</h2>
+                        <ol style="margin:0 0 8px 18px">
+                            <li>Консултация и диагностика на кожата</li>
+                            <li>Почистване, ексфолиране и дехидратация на порите</li>
+                            <li>Почистване на комедони и обработка на възпаления</li>
+                            <li>Успокояваща маска и серум за възстановяване</li>
+                        </ol>
+
+                        <h2 style="margin:12px 0 8px 0;font-size:18px">За кого е подходяща</h2>
+                        <p style="margin:0 0 8px 0;color:var(--muted)">Подходяща е за клиенти със склонност към акне, разширени пори, прекомерен себум или упорити комедони. Необходима е консултация при по-силни възпалителни състояния.</p>
+
+                        <h2 style="margin:12px 0 8px 0;font-size:18px">Препоръки след процедура</h2>
+                        <ul>
+                            <li>Избягвайте силно излагане на слънце 48 часа</li>
+                            <li>Използвайте нежни почистващи продукти и хидратиращ серум</li>
+                            <li>Следвайте индивидуалните указания на специалиста</li>
+                        </ul>
+                    </section>
+
+                    <section class="faq">
+                        <h2 style="margin:12px 0 8px 0;font-size:18px">Често задавани въпроси</h2>
+
+                        <details style="margin-bottom:8px">
+                            <summary>Боли ли процедурата?</summary>
+                            <div style="color:var(--muted);margin-top:6px">Обикновено е поносима; при чувствителност се прилагат локални успокояващи средства.</div>
+                        </details>
+
+                        <details>
+                            <summary>Колко често да се прави?</summary>
+                            <div style="color:var(--muted);margin-top:6px">Препоръчва се веднъж на 4–8 седмици в зависимост от състоянието на кожата.</div>
+                        </details>
+                    </section>
+                </section>
+
+                <section id="цени" style="margin-top:12px">
+                    <div class="card">
+                        <h3 style="margin:0 0 8px 0">Включено в цената</h3>
+                        <ul>
+                            <li>Консултация и диагностика</li>
+                            <li>Почистване и маска</li>
+                            <li>Домашна грижа - мини пробник</li>
+                        </ul>
+                        <div style="margin-top:8px;font-size:14px;color:var(--muted)">Продължителност: ~60 мин</div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <div style="font-size:13px;color:var(--muted)">Процедура</div>
+                            <div style="font-weight:800">Медицинско почистване</div>
+                        </div>
+                        <div style="text-align:right">
+                            <div class="price">75 лв</div>
+                            <div style="font-size:12px;color:var(--muted)">Специална оферта при първо посещение</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:12px">
+                        <label style="display:block;font-size:13px;color:var(--muted);margin-bottom:6px">Изберете дата</label>
+                        <input type="date" style="width:100%;padding:10px;border-radius:8px;border:1px solid #efe6e4" />
+
+                        <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px">Име</label>
+                        <input type="text" placeholder="Вашето име" style="width:100%;padding:10px;border-radius:8px;border:1px solid #efe6e4" />
+
+                        <label style="display:block;font-size:13px;color:var(--muted);margin:10px 0 6px">Телефон</label>
+                        <input type="tel" placeholder="+359 8.." style="width:100%;padding:10px;border-radius:8px;border:1px solid #efe6e4" />
+
+                        <button class="btn" style="width:100%;margin-top:12px">Запазете час</button>
+
+                        <div class="meta">
+                            <div>Продължителност: 60 мин</div>
+                            <div>Гаранция: консултация след процедура</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="card">
+                    <div style="font-weight:700">Работно време</div>
+                    <div style="color:var(--muted);margin-top:8px">Пон-Пет: 09:00–19:00<br>Съб: 10:00–15:00</div>
+                    <a href="#kontakt" class="btn" style="display:block;text-align:center;margin-top:12px;background:#5a2b1f">Контакт</a>
+                </div>
+            </aside>
+        </main>
+<section class="card" style="margin-top:16px">
+  <h3 style="margin-top:0">Свързани страници</h3>
+  <p style="margin:0 0 10px;color:#6b7280">
+    Разгледай още услуги и комбинирани терапии.
+  </p>
+  <p style="margin:0">
+    <a href="services.html" style="font-weight:700;color:#b98a73;text-decoration:none">← Всички процедури</a>
+    <span style="display:inline-block;width:10px"></span>
+    <a href="skincheck-analiz-na-kozha.html" style="font-weight:600;color:#b98a73;text-decoration:none">Skin Check</a>
+    <span style="color:#6b7280"> • </span>
+    <a href="lechenie-na-akne-vraca.html" style="font-weight:600;color:#b98a73;text-decoration:none">Лечение на акне</a>
+    <span style="color:#6b7280"> • </span>
+    <a href="alternativa-na-botox-vraca.html" style="font-weight:600;color:#b98a73;text-decoration:none">Алтернатива на ботокс</a>
+  </p>
+</section>
+
+        <footer id="kontakt">
+            <div>Адрес: ул. Пример 12, София • Тел: +359 88 000 0000 • info@auren.bg</div>
+            <div style="margin-top:8px">© AUREN Beauty — Всички права запазени</div>
+        </footer>
+    </div>
+</body>
+</html>
