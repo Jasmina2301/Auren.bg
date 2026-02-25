@@ -1,204 +1,119 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PDRN / Salmon DNA �,е�?апия | AUREN Beauty</title>
-    <meta name="description" content="PDRN / Salmon DNA �,е�?апия в AUREN Beauty - кле�,�S�?но в�Sзс�,ановяване, �?егене�?а�?ия и ан�,и-ейдж е�"ек�, за �?�fвс�,ви�,елна и п�?облемна кожа.">
+  <title>PDRN / Salmon DNA терапия | AUREN Beauty</title>
+  <meta name="description" content="PDRN / Salmon DNA терапия в AUREN Beauty – клетъчно възстановяване, регенерация и anti-age ефект за чувствителна и проблемна кожа.">
 
-    <style>
-        :root{
-            --accent:#b98a73;
-            --muted:#6b7280;
-            --bg:#ffffff;
-            --card:#fbf7f5;
-            --maxw:1100px;
-            --radius:12px;
-            --shadow:0 6px 20px rgba(16,24,40,.08);
-            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-        }
-
-        *{box-sizing:border-box}
-
-        body{
-            margin:0;
-            background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);
-            color:#111;
-            line-height:1.6;
-            -webkit-font-smoothing:antialiased;
-            -moz-osx-font-smoothing:grayscale;
-        }
-
-        .container{
-            max-width:var(--maxw);
-            margin:32px auto;
-            padding:24px;
-        }
-
-        header{
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:24px;
-            margin-bottom:28px;
-        }
-
-        .brand{
-            display:flex;
-            align-items:center;
-            gap:12px;
-        }
-
-        .logo{
-            width:56px;
-            height:56px;
-            border-radius:12px;
-            background:linear-gradient(135deg,#fdebd8,#f7c9ba);
-            display:grid;
-            place-items:center;
-            font-weight:800;
-            color:#5a2b1f;
-        }
-
-        nav{
-            display:flex;
-            gap:18px;
-            font-weight:600;
-        }
-
-        nav a{
-            color:var(--muted);
-            text-decoration:none;
-        }
-
-        h1{
-            margin:0;
-            font-size:clamp(1.8rem,2.8vw,2.4rem);
-        }
-
-        p.lead{
-            color:var(--muted);
-            max-width:75ch;
-            margin-top:12px;
-        }
-
-        section{
-            background:var(--card);
-            padding:20px;
-            border-radius:var(--radius);
-            box-shadow:var(--shadow);
-            margin-bottom:22px;
-        }
-
-        h2{
-            margin-top:0;
-            font-size:1.25rem;
-        }
-
-        ul{
-            margin:8px 0 0 18px;
-        }
-
-        .badge{
-            display:inline-block;
-            margin-top:10px;
-            padding:6px 10px;
-            border-radius:999px;
-            font-weight:700;
-            color:#fff;
-            background:var(--accent);
-            font-size:.9rem;
-        }
-
-        .note{
-            font-weight:700;
-            color:#111;
-        }
-
-        .cta{
-            display:inline-block;
-            margin-top:14px;
-            padding:10px 16px;
-            background:var(--accent);
-            color:#fff;
-            border-radius:10px;
-            text-decoration:none;
-            font-weight:700;
-        }
-
-        footer{
-            margin-top:44px;
-            padding-top:18px;
-            border-top:1px solid rgba(16,24,40,.06);
-            color:var(--muted);
-            display:flex;
-            justify-content:space-between;
-            flex-wrap:wrap;
-            gap:12px;
-            font-size:.9rem;
-        }
-    </style>
+  <style>
+    :root{
+      --accent:#b98a73;
+      --muted:#6b7280;
+      --card:#fbf7f5;
+      --maxw:1100px;
+      --radius:12px;
+      --shadow:0 6px 20px rgba(16,24,40,.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    img{max-width:100%;height:auto}
+    body{margin:0;background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);color:#111;line-height:1.6}
+    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fdebd8,#f7c9ba);display:grid;place-items:center;font-weight:800;color:#5a2b1f}
+    nav{display:flex;gap:18px;font-weight:600}
+    nav a{color:var(--muted);text-decoration:none}
+    h1{margin:0;font-size:clamp(1.8rem,2.8vw,2.4rem)}
+    p.lead{color:var(--muted);max-width:75ch;margin-top:12px}
+    section{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:22px}
+    h2{margin-top:0;font-size:1.25rem}
+    ul{margin:8px 0 0 18px}
+    .badge{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;font-weight:700;color:#fff;background:var(--accent);font-size:.9rem}
+    .cta{display:inline-block;margin-top:14px;padding:10px 16px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
+    .related p{margin:0 0 10px;color:var(--muted)}
+    .related-links{display:flex;flex-wrap:wrap;gap:8px 10px}
+    .related-links a{font-weight:700;color:var(--accent);text-decoration:none}
+    footer{margin-top:44px;padding-top:18px;border-top:1px solid rgba(16,24,40,.06);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.9rem}
+    @media (max-width:720px){
+      .container{margin:16px auto;padding:16px}
+      header{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px}
+      nav{width:100%;display:grid;grid-template-columns:1fr;gap:8px}
+      nav a{display:block;text-align:center;padding:10px 8px;background:#fff;border:1px solid rgba(16,24,40,.1);border-radius:10px}
+      h1{font-size:clamp(1.55rem,7vw,2rem)}
+      section{padding:16px}
+      .cta{width:100%;text-align:center}
+      footer{margin-top:28px;padding-top:14px}
+    }
+  </style>
 </head>
-
 <body>
 
 <div class="container">
-    <header>
-        <div class="brand">
-            <div class="logo">A</div>
-            <div>
-                <div style="font-weight:800">AUREN Beauty</div>
-                <div style="font-size:12px;color:var(--muted)">�sозме�,и�?ен салон �?� �'�?а�?а</div>
-            </div>
-        </div>
+  <header>
+    <div class="brand">
+      <div class="logo">A</div>
+      <div>
+        <div style="font-weight:800">AUREN Beauty</div>
+        <div style="font-size:12px;color:var(--muted)">Козметичен салон • Враца</div>
+      </div>
+    </div>
 
-        <nav aria-label="�"лавно мен�Z">
-            <a href="index.html">На�?ало</a>
-            <a href="services.html">�Y�?о�?ед�f�?и</a>
-            <a href="index.html#contact">�sонс�fл�,а�?ия</a>
-        </nav>
-    </header>
+    <nav aria-label="Главно меню">
+      <a href="index.html">Начало</a>
+      <a href="services.html">Процедури</a>
+      <a href="index.html#contact">Консултация</a>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>PDRN / Salmon DNA �,е�?апия (�"Н�s о�, с�Oомга) - �sле�,�S�?но в�Sзс�,ановяване</h1>
-            <p class="lead">�oе�,од на в�Sвеждане: мик�?оиглена �,е�?апия или безиглена ин�"�fзия</p>
-            <span class="badge">K-Beauty Anti-Age</span>
-            <p>Това е една о�, най-моде�?ни�,е ко�?ейски ан�,и-ейдж �,е�?апии. �~зползва�, се полин�fклео�,иди (PDRN) - �"Н�s �"�?агмен�,и, кои�,о �?z�?емон�,и�?а�,�?o кле�,ки�,е.</p>
-            <a class="cta" href="index.html#contact">�-апази конс�fл�,а�?ия</a>
-        </section>
+  <main>
+    <section>
+      <h1>PDRN / Salmon DNA терапия – Клетъчно възстановяване</h1>
+      <p class="lead">Метод на въвеждане: микроиглена терапия или безиглена инфузия.</p>
+      <span class="badge">K-Beauty Anti-Age</span>
+      <p>PDRN (полинуклеотиди) подпомага възстановяването на тъканите и подобрява плътността и еластичността на кожата.</p>
+      <a class="cta" href="index.html#contact">Запази консултация</a>
+    </section>
 
-        <section>
-            <h2>�.�"ек�, в�S�?�.�f кожа�,а</h2>
-            <ul>
-                <li>с�,им�fли�?а син�,еза на колаген</li>
-                <li>�fско�?ява �?егене�?а�?ия�,а на �,�Sкани�,е</li>
-                <li>подоб�?ява елас�,и�?нос�,�,а и пл�S�,нос�,�,а</li>
-                <li>�fспокоява в�Sзпаления и пос�,-акне</li>
-            </ul>
-        </section>
+    <section>
+      <h2>Ефект върху кожата</h2>
+      <ul>
+        <li>стимулира синтеза на колаген</li>
+        <li>ускорява регенерацията</li>
+        <li>подобрява еластичността</li>
+        <li>успокоява постакне и възпаления</li>
+      </ul>
+    </section>
 
-        <section>
-            <h2>�Yод�.одя�?а за:</h2>
-            <ul>
-                <li>�,�Sнка и �?�fвс�,ви�,елна кожа</li>
-                <li>п�S�?ви б�?�S�?ки (25+)</li>
-                <li>кожа след акне</li>
-                <li>де�.ид�?а�,и�?ана кожа</li>
-                <li>�?оза�?ея и �?азд�?азнения</li>
-            </ul>
-            <p class="note">�Y'? Това е �,е�?апия�,а, коя�,о �?еално �?zлек�fва�?o кожа�,а, а не п�?ос�,о я �.ид�?а�,и�?а.</p>
-        </section>
-    </main>
+    <section>
+      <h2>Подходяща за</h2>
+      <ul>
+        <li>чувствителна и тънка кожа</li>
+        <li>първи бръчки (25+)</li>
+        <li>дехидратирана кожа</li>
+        <li>постакне белези</li>
+      </ul>
+    </section>
 
-    <footer>
-        <div>© AUREN Beauty �?" �'си�?ки п�?ава запазени</div>
-        <div>�'�?а�?а �?� <a href="tel:+359880000000" style="color:inherit;text-decoration:none">+359 88 000 0000</a></div>
-    </footer>
+    <section class="related">
+      <h2 style="margin-bottom:10px">Свързани страници</h2>
+      <p>Разгледай още услуги и комбинирани терапии.</p>
+      <div class="related-links">
+        <a href="services.html">← Всички процедури</a>
+        <a href="exosome-terapiya.html">EXOSOME Therapy</a>
+        <a href="mezoterapiya-biorevitalizatsiya.html">Мезотерапия</a>
+        <a href="skincheck-analiz-na-kozha.html">Skin Check</a>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div>© AUREN Beauty — Всички права запазени</div>
+    <div>Враца • <a href="tel:+359880000000" style="color:inherit;text-decoration:none">+359 88 000 0000</a></div>
+  </footer>
 </div>
 
 </body>
 </html>
-
