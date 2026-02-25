@@ -1,92 +1,64 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Процедури | AUREN Beauty - козметичен салон във Враца</title>
-  <meta name="description"
-        content="Процедури в AUREN Beauty - Skin Check анализ, кислородна и хидро терапия, акне терапии, Face Contour Architect и други професионални грижи за кожата във Враца.">
-
+  <title>Процедури | AUREN Beauty</title>
+  <meta name="description" content="Всички процедури в AUREN Beauty Враца: анализ, акне терапии, anti-age и регенерация.">
   <style>
-    :root{
-      --accent:#b98a73;
-      --muted:#6b7280;
-      --card:#fbf7f5;
-      --maxw:1100px;
-      --radius:12px;
-      --shadow:0 6px 20px rgba(16,24,40,.08);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    }
+    :root{--accent:#b98a73;--muted:#607086;--card:#fbf7f5;--maxw:1140px;--radius:14px;--line:#e9e3de;--shadow:0 8px 26px rgba(19,27,33,.07);font-family:"Segoe UI",Tahoma,Arial,sans-serif}
     *{box-sizing:border-box}
-    img{max-width:100%;height:auto}
-    body{margin:0;background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);color:#111;line-height:1.6}
-    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:40px}
+    body{margin:0;color:#111827;background:radial-gradient(circle at 8% 0%,#fff7ef 0%,#ffffff 45%),linear-gradient(180deg,#fff 0%,#fafafa 100%);line-height:1.62}
+    .container{max-width:var(--maxw);margin:0 auto;padding:32px 20px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:28px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fdebd8,#f7c9ba);display:grid;place-items:center;font-weight:800;color:#5a2b1f}
-    nav{display:flex;gap:18px;font-weight:600}
-    nav a{color:var(--muted);text-decoration:none}
-    h1{font-size:clamp(1.8rem,3vw,2.4rem);margin:0 0 12px}
-    h2{margin-top:40px;font-size:1.4rem}
-    p.lead{color:var(--muted);max-width:75ch}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px}
-    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .card h3{margin-top:0}
-    .card a{display:inline-block;margin-top:10px;font-weight:700;color:var(--accent);text-decoration:none}
-    .cta{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
-    .pillars{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .pillars a{background:#fff;border:1px solid rgba(16,24,40,.08);padding:8px 10px;border-radius:10px;text-decoration:none;color:#111;font-weight:600}
-    footer{margin-top:56px;padding-top:18px;border-top:1px solid rgba(16,24,40,.06);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.9rem}
-
-    @media (max-width:720px){
-      .container{margin:16px auto;padding:16px}
-      header{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px}
-      nav{width:100%;display:grid;grid-template-columns:1fr;gap:8px}
-      nav a{display:block;text-align:center;padding:10px 8px;background:#fff;border:1px solid rgba(16,24,40,.1);border-radius:10px}
-      h1{font-size:clamp(1.55rem,7vw,2rem)}
-      h2{margin-top:28px;font-size:1.22rem}
-      .grid{grid-template-columns:1fr;gap:14px}
-      .card{padding:16px}
-      .pillars{gap:8px}
-      .pillars a{padding:8px 10px}
-      .cta{width:100%;text-align:center}
-      footer{margin-top:30px;padding-top:14px}
-    }
+    .logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(145deg,#fae4d5,#efc7b4);display:grid;place-items:center;font-weight:800;font-size:34px;color:#5f3324}
+    .brand strong{display:block;font-size:38px;line-height:1;font-weight:900;letter-spacing:.7px}
+    .brand span{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:20px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none;font-weight:700}
+    nav a:hover{color:#111827}
+    h1{font-size:clamp(2rem,4vw,3rem);margin:4px 0 10px}
+    h2{font-size:1.4rem;margin:32px 0 14px}
+    .lead{max-width:74ch;color:var(--muted);font-size:1.08rem}
+    .pillars{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px}
+    .pillars a{padding:9px 14px;background:#fff;border:1px solid var(--line);border-radius:11px;text-decoration:none;color:#1f2937;font-weight:700}
+    .pillars a:hover{border-color:#cfb39f;background:#fff7f1}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid #f0e7e1;padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card h3{margin:2px 0 10px;font-size:1.55rem}
+    .card p{margin:0;color:var(--muted)}
+    .card a{display:inline-block;margin-top:12px;color:var(--accent);font-weight:800;text-decoration:none}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:11px;text-decoration:none;font-weight:800;margin-top:12px}
+    footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:.95rem}
+    @media (max-width:780px){.container{padding:18px 14px}header{flex-direction:column;align-items:flex-start}nav{width:100%;display:grid;grid-template-columns:1fr}.brand strong{font-size:32px}.card h3{font-size:1.35rem}}
   </style>
 </head>
-
 <body>
 <div class="container">
-
   <header>
     <div class="brand">
       <div class="logo">A</div>
       <div>
-        <div style="font-weight:800">AUREN Beauty</div>
-        <div style="font-size:12px;color:var(--muted)">Козметичен салон • Враца</div>
+        <strong>AUREN Beauty</strong>
+        <span>Професионална грижа за кожата във Враца</span>
       </div>
     </div>
-
     <nav aria-label="Главно меню">
       <a href="index.html">Начало</a>
       <a href="services.html">Процедури</a>
-      <a href="index.html#contact">Консултация</a>
+      <a href="index.html#contact">Запази консултация</a>
     </nav>
   </header>
 
   <section>
     <h1>Процедури</h1>
-    <p class="lead">
-      Подбрахме терапии, които комбинират анализ, персонализиране и неинвазивни технологии.
-      Тук ще намериш всички услуги на AUREN Beauty във Враца.
-    </p>
-
-    <div class="pillars" aria-label="Основни теми">
+    <p class="lead">Подбрани терапии, които комбинират диагностика, персонализиран подход и неинвазивни технологии за видимо по-здрава и балансирана кожа.</p>
+    <div class="pillars">
       <a href="alternativa-na-botox-vratsa.html">Алтернатива на ботокс</a>
       <a href="lechenie-na-akne-vraca.html">Лечение на акне</a>
       <a href="skincheck-analiz-na-kozha.html">Skin Check</a>
-      <a href="pdrn-salmon-dna-terapiya.html">PDRN / Salmon DNA терапия</a>
+      <a href="pdrn-salmon-dna-terapiya.html">PDRN / Salmon DNA</a>
       <a href="exosome-terapiya.html">EXOSOME Therapy</a>
     </div>
   </section>
@@ -94,87 +66,35 @@
   <section>
     <h2>Основни терапии</h2>
     <div class="grid">
-      <article class="card">
-        <h3>Skin Check - Анализ на кожата</h3>
-        <p>Оценка на състоянието на кожата и проследяване на резултатите във времето.</p>
-        <a href="skincheck-analiz-na-kozha.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>Кислородна и хидро терапия</h3>
-        <p>Дълбоко почистване, хидратация, озонотерапия и PDT за сияен тен и чиста кожа.</p>
-        <a href="kislorodna-hidroterapiya.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>Face Contour Architect</h3>
-        <p>EMS + RF лифтинг. Неинвазивна алтернатива на ботокс. Курс от 6 процедури.</p>
-        <a href="face-contour-architect.html">Отвори страницата</a>
-      </article>
+      <article class="card"><h3>Skin Check - Анализ на кожата</h3><p>Обективна оценка и проследяване на състоянието на кожата.</p><a href="skincheck-analiz-na-kozha.html">Отвори страницата</a></article>
+      <article class="card"><h3>Кислородна хидротерапия</h3><p>Нежно почистване, хидратация и освежаване на тена.</p><a href="kislorodna-hidroterapiya.html">Отвори страницата</a></article>
+      <article class="card"><h3>Face Contour Architect</h3><p>EMS + RF лифтинг за стегнат контур без инжекции.</p><a href="face-contour-architect.html">Отвори страницата</a></article>
     </div>
   </section>
 
   <section>
     <h2>Акне и проблемна кожа</h2>
     <div class="grid">
-      <article class="card">
-        <h3>Лечение на акне</h3>
-        <p>Персонализирани козметични и апаратни терапии според състоянието на кожата.</p>
-        <a href="lechenie-na-akne-vraca.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>Озонотерапия и PDT при акне</h3>
-        <p>Антибактериален ефект, контрол на възпаленията и успокояване на кожата.</p>
-        <a href="ozon-pdt-terapiya-akne.html">Отвори страницата</a>
-      </article>
+      <article class="card"><h3>Лечение на акне</h3><p>Персонален протокол за контрол на възпаленията и себума.</p><a href="lechenie-na-akne-vraca.html">Отвори страницата</a></article>
+      <article class="card"><h3>Озонотерапия + PDT</h3><p>Антибактериален подход за активни лезии и зачервяване.</p><a href="ozon-pdt-terapiya-akne.html">Отвори страницата</a></article>
     </div>
   </section>
 
   <section>
-    <h2>Целенасочени терапии за текстура, тонус и блясък</h2>
+    <h2>Текстура, тонус и блясък</h2>
     <div class="grid">
-      <article class="card">
-        <h3>Медицинско почистване на лице</h3>
-        <p>Професионално почистване за комедони, пори и омазняване.</p>
-        <a href="pochistvane-na-litse-vratsa.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>Химичен пилинг</h3>
-        <p>Обновяване на кожата, изравняване на тена и подобряване на текстурата.</p>
-        <a href="himichen-piling.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>Мезотерапия и биоревитализация</h3>
-        <p>Микроиглена терапия или безиглена инфузия за хидратация и регенерация.</p>
-        <a href="mezoterapiya-biorevitalizatsiya.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>PDRN / Salmon DNA терапия</h3>
-        <p>Клетъчно възстановяване с полинуклеотиди (PDRN) за регенерация, плътност и anti-age ефект.</p>
-        <a href="pdrn-salmon-dna-terapiya.html">Отвори страницата</a>
-      </article>
-
-      <article class="card">
-        <h3>EXOSOME Therapy</h3>
-        <p>Микронидлинг (Dermapen) + екзозомен серум за клетъчна регенерация и силен glass skin ефект.</p>
-        <a href="exosome-terapiya.html">Отвори страницата</a>
-      </article>
+      <article class="card"><h3>Медицинско почистване</h3><p>Дълбоко почистване при комедони, запушени пори и мазна кожа.</p><a href="pochistvane-na-litse-vratsa.html">Отвори страницата</a></article>
+      <article class="card"><h3>Химичен пилинг</h3><p>Изравняване на тена, по-фина текстура и свеж вид на кожата.</p><a href="himichen-piling.html">Отвори страницата</a></article>
+      <article class="card"><h3>Мезотерапия / Биоревитализация</h3><p>Интензивна хидратация и стимулиране на естествената регенерация.</p><a href="mezoterapiya-biorevitalizatsiya.html">Отвори страницата</a></article>
+      <article class="card"><h3>PDRN / Salmon DNA</h3><p>Клетъчно възстановяване, anti-age ефект и подобрена еластичност.</p><a href="pdrn-salmon-dna-terapiya.html">Отвори страницата</a></article>
+      <article class="card"><h3>EXOSOME Therapy</h3><p>Микронидлинг + екзозомен серум за „glass skin“ ефект.</p><a href="exosome-terapiya.html">Отвори страницата</a></article>
+      <article class="card"><h3>Радиочестотен лифтинг</h3><p>Неинвазивно стягане на кожата и редуциране на фини линии.</p><a href="radiochestoten-lifting.html">Отвори страницата</a></article>
     </div>
   </section>
 
-  <p style="margin-top:16px">
-    <a class="cta" href="index.html#contact">>>> Запази час</a>
-  </p>
+  <a class="cta" href="index.html#contact">Запази час</a>
 
-  <footer>
-    <div>© AUREN Beauty — Всички права запазени</div>
-    <div>Враца • <a href="tel:+359880000000" style="color:inherit;text-decoration:none">+359 88 000 0000</a></div>
-  </footer>
-
+  <footer>© AUREN Beauty</footer>
 </div>
 </body>
 </html>
