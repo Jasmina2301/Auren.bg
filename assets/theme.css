@@ -222,11 +222,26 @@ nav.site-nav a {
   color: hsl(var(--muted-foreground));
   padding: 8px 10px;
   border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 nav.site-nav a:hover {
   background: hsl(var(--muted));
   color: hsl(var(--foreground));
+}
+
+/* Top-right CTA in desktop nav (Book Consultation style) */
+nav.site-nav a:last-child {
+  margin-left: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: hsl(var(--gold) / .65);
+  color: hsl(var(--charcoal));
+  font-weight: 700;
+}
+nav.site-nav a:last-child:hover {
+  background: hsl(var(--gold) / .78);
 }
 
 /* Fallback for pages that still use plain header/nav markup */
@@ -354,30 +369,66 @@ header:not(.site-header) nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 11px 16px;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  padding: 16px 30px;
+  border-radius: 14px;
+  border: 2px solid transparent;
   font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.1;
   text-decoration: none;
   cursor: pointer;
+  transition: .2s ease;
 }
 
 .btn-primary,
 .cta {
-  background: var(--gradient-gold);
-  color: hsl(var(--primary-foreground));
-  box-shadow: var(--shadow-glow);
+  background: hsl(var(--gold) / .7);
+  color: hsl(var(--charcoal));
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover,
-.cta:hover { filter: brightness(.98); }
+.cta:hover { background: hsl(var(--gold) / .82); }
 
 .btn-outline {
-  background: rgba(255,255,255,.7);
-  border-color: hsl(var(--border));
+  background: rgba(255,255,255,.9);
+  border-color: hsl(var(--gold) / .9);
+  color: hsl(var(--charcoal));
 }
 
-.btn-outline:hover { background: rgba(255,255,255,.95); }
+.btn-outline:hover { background: #fff; }
+
+/* Home page legacy button class support */
+.cta-button { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: hsl(var(--gold) / .7);
+  color: hsl(var(--charcoal));
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.1;
+  box-shadow: var(--shadow-soft);
+}
+.cta-button:hover { background: hsl(var(--gold) / .82); }
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 16px;
+}
+.cta.secondary {
+  background: rgba(255,255,255,.9);
+  border-color: hsl(var(--gold) / .9);
+  color: hsl(var(--charcoal));
+}
+.cta.secondary:hover { background: #fff; }
 
 form { display: flex; flex-direction: column; gap: 10px; }
 label { font-size: .92rem; font-weight: 600; color: hsl(var(--foreground)); }
@@ -450,9 +501,25 @@ footer:not(.site-footer) {
   }
   nav.site-nav.is-open { display: flex; }
   nav.site-nav a { width: 100%; }
+  nav.site-nav a:last-child {
+    margin-left: 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: transparent;
+    color: hsl(var(--muted-foreground));
+    font-weight: 600;
+  }
+  nav.site-nav a:last-child:hover {
+    background: hsl(var(--muted));
+    color: hsl(var(--foreground));
+  }
   .hero { padding: 22px; }
   .container > header:not(.site-header),
   header:not(.site-header) { flex-direction: column; align-items: flex-start; }
   .container > header:not(.site-header) nav,
   header:not(.site-header) nav { width: 100%; }
+  .btn, .btn-primary, .btn-outline, .cta, .cta-button {
+    width: 100%;
+    max-width: 360px;
+  }
 }
