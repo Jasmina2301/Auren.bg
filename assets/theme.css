@@ -326,7 +326,7 @@ header:not(.site-header) nav a:hover {
   min-height: 520px;
   background-image:
     linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.78) 42%, rgba(255,255,255,.35) 65%, rgba(255,255,255,.18) 100%),
-    url("assets/hero.jpg"),
+    url("hero.jpg"),
     var(--gradient-hero);
   background-size: cover;
   background-position: center right;
@@ -336,6 +336,14 @@ header:not(.site-header) nav a:hover {
   position: relative;
   z-index: 1;
   max-width: 740px;
+}
+
+.hero.services-hero {
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 45%, rgba(255,255,255,.55) 70%, rgba(255,255,255,.38) 100%),
+    url("services-hero.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .section-title {
@@ -581,8 +589,14 @@ footer:not(.site-footer) {
     background-position: 62% center;
     background-image:
       linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.76) 48%, rgba(255,255,255,.62) 100%),
-      url("assets/hero.jpg"),
+      url("hero.jpg"),
       var(--gradient-hero);
+  }
+  .hero.services-hero {
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,.68) 100%),
+      url("services-hero.png");
+    background-position: center;
   }
   .container > header:not(.site-header),
   header:not(.site-header) { flex-direction: column; align-items: flex-start; }
