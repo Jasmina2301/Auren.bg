@@ -3,71 +3,242 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Face Contour Architect - алтернатива на ботокс | AUREN Beauty</title>
-  <meta name="description" content="Face Contour Architect с EMS + RF лифтинг за стегнат овал и по-изразен контур без инжекции. Комбинирай с Алтернатива на ботокс за максимален anti-age ефект.">
+
+  <title>Face Contour Architect – неинвазивна алтернатива на ботокс | Враца</title>
+  <meta name="description"
+        content="Face Contour Architect във Враца – EMS и RF лифтинг за лице. Неинвазивна алтернатива на ботокс с курс от 6 процедури и пакетна цена за максимален ефект.">
+
   <style>
-    :root{--accent:#b98a73;--muted:#607086;--card:#fbf7f5;--maxw:1140px;--radius:14px;--line:#e9e3de;--shadow:0 8px 26px rgba(19,27,33,.07);font-family:"Segoe UI",Tahoma,Arial,sans-serif}
-    *{box-sizing:border-box}body{margin:0;color:#111827;background:linear-gradient(180deg,#fff8f2 0%,#ffffff 42%);line-height:1.64}.container{max-width:var(--maxw);margin:0 auto;padding:32px 20px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(145deg,#fae4d5,#efc7b4);display:grid;place-items:center;font-weight:800;font-size:34px;color:#5f3324}.brand strong{display:block;font-size:38px;line-height:1}.brand span{font-size:12px;color:var(--muted)}
-    nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-weight:700}
-    .hero{display:grid;grid-template-columns:minmax(0,1fr)320px;gap:28px}.panel{background:var(--card);border:1px solid #f0e7e1;padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    h1{font-size:clamp(2rem,4vw,2.8rem);margin:6px 0 10px}h2{font-size:1.9rem;margin:28px 0 10px}p{font-size:1.08rem;margin:0 0 16px}.muted{color:var(--muted)}
-    ul{margin:10px 0 0;padding-left:24px}li{font-size:1.03rem;margin:8px 0}.cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:11px;text-decoration:none;font-weight:800;margin-top:8px}
-    .bundle{margin-top:22px;background:#fff7f1;border:1px solid #efddcf;border-radius:12px;padding:16px}
-    .bundle p{margin:0 0 10px}
-    .dual-cta{display:flex;gap:10px;flex-wrap:wrap}
-    .ghost{display:inline-block;background:#fff;color:#6a4b3a;padding:12px 18px;border-radius:11px;text-decoration:none;font-weight:800;border:1px solid #d6bea9}
-    .related{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.related a{color:var(--accent);text-decoration:none;font-weight:700}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.container{padding:18px 14px}header{flex-direction:column;align-items:flex-start}.brand strong{font-size:32px}p{font-size:1.2rem}li{font-size:1.15rem}}
+    :root{
+      --accent:#b98a73;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#fbf7f5;
+      --maxw:1100px;
+      --radius:12px;
+      --shadow:0 6px 20px rgba(16,24,40,.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff 0%, #fbfbfb 100%);
+      color:#111;
+      line-height:1.5;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:32px auto;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:28px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#fdebd8,#f7c9ba);
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#5a2b1f;
+    }
+
+    nav{
+      display:flex;
+      gap:18px;
+      font-weight:600;
+    }
+
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:28px;
+      align-items:start;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(1.6rem,2.6vw,2.2rem);
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      margin:8px 0 16px;
+    }
+
+    p.lead{
+      color:var(--muted);
+      max-width:72ch;
+    }
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    ul{
+      margin:8px 0 18px 18px;
+    }
+
+    .cta{
+      display:inline-block;
+      padding:10px 16px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    footer{
+      margin-top:32px;
+      padding-top:18px;
+      border-top:1px solid rgba(16,24,40,.06);
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:.9rem;
+    }
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
+
 <body>
+
 <div class="container">
+
   <header>
-    <div class="brand"><div class="logo">A</div><div><strong>AUREN Beauty</strong><span>Лифтинг и контуриране без инжекции</span></div></div>
-    <nav><a href="index.html">Начало</a><a href="services.html">Процедури</a><a href="index.html#contact">Запази консултация</a></nav>
-  </header>
-
-  <section class="hero">
-    <div>
-      <h1>Face Contour Architect</h1>
-      <p class="muted">EMS + RF лифтинг за неинвазивна стимулация на мускулите и кожата.</p>
-      <p>Терапията съчетава мускулна активация и загряване в дълбочина, което подобрява тонуса, стяга контурите и редуцира отпуснатия вид на лицето.</p>
-
-      <h2>Ползи</h2>
-      <ul>
-        <li>по-ясно оформен овал и челюстна линия</li>
-        <li>видимо стягане на бузите</li>
-        <li>намаляване на фините линии</li>
-        <li>по-свеж и отпочинал вид</li>
-      </ul>
-
-      <section class="bundle">
-        <h2>Силен anti-age резултат: комбиниран протокол</h2>
-        <p>За по-бърз и видим ефект комбинирай <strong>Face Contour Architect</strong> с <strong>Алтернатива на ботокс</strong> - стратегическа комбинация за повдигане, изглаждане и стягане без инжекции.</p>
-        <div class="dual-cta">
-          <a class="cta" href="alternativa-na-botox-vratsa.html">Виж Алтернатива на ботокс</a>
-          <a class="ghost" href="index.html#contact">Запази комбинирана консултация</a>
-        </div>
-      </section>
+    <div class="brand">
+      <div class="logo">A</div>
+      <div>
+        <div style="font-weight:800">AUREN Beauty</div>
+        <div style="font-size:12px;color:var(--muted)">Неинвазивен лифтинг и контуриране</div>
+      </div>
     </div>
 
-    <aside class="panel">
-      <h3>Бърза информация</h3>
-      <p class="muted">Процедура: EMS + RF лифтинг</p>
-      <p class="muted">Продължителност: около 60 минути</p>
-      <p class="muted">Няма възстановителен период</p>
-      <p class="muted">Подходящо за курс от 6 процедури</p>
+    <nav aria-label="Главно меню">
+      <a href="index.html">Начало</a>
+      <a href="services.html">Процедури</a>
+      <a href="index.html#contact">Запази консултация</a>
+    </nav>
+  </header>
+
+  <main class="grid">
+
+    <section>
+      <h1>Face Contour Architect</h1>
+      <div class="meta">
+        EMS + RF лифтинг • Неинвазивна алтернатива на ботокс | Враца
+      </div>
+
+      <p class="lead">
+        Face Contour Architect е иновативна, напълно неинвазивна процедура
+        за лифтинг и контуриране на лицето, която постига
+        <strong>изглаждащ и повдигащ ефект, сравним с ботокс</strong>,
+        без инжектиране на токсини в тялото.
+      </p>
+
+      <h2>Как работи Face Contour Architect</h2>
+      <p>
+        Процедурата комбинира <strong>EMS мускулна стимулация</strong> и
+        <strong>радиочестотна (RF) енергия</strong>, които въздействат
+        едновременно върху лицевите мускули и кожата.
+      </p>
+
+      <ul>
+        <li>EMS активира и „тренира“ лицевата мускулатура</li>
+        <li>RF стимулира колагена и еластина</li>
+        <li>Подобрява плътността и тонуса на кожата</li>
+        <li>Извайва и повдига лицевия контур</li>
+      </ul>
+
+      <h2>Защо процедурата е алтернатива на ботокс</h2>
+      <p>
+        Докато ботоксът временно блокира мускулната активност чрез токсин,
+        Face Contour Architect работи по физиологичен начин –
+        чрез контролирана мускулна стимулация и стягане на тъканите.
+      </p>
+
+      <ul>
+        <li>Без инжекции</li>
+        <li>Без токсини</li>
+        <li>Без възстановителен период</li>
+        <li>Естествен и хармоничен резултат</li>
+      </ul>
+
+      <h2>Курс от 6 процедури – ключът към максималния ефект</h2>
+      <p>
+        За да се постигне оптимален, стабилен и дълготраен резултат,
+        Face Contour Architect се провежда като
+        <strong>курс от 6 процедури</strong>.
+      </p>
+
+      <ul>
+        <li>Постепенно укрепване на лицевата мускулатура</li>
+        <li>Натрупващ ефект върху колагена</li>
+        <li>По-добро и по-дълготрайно повдигане</li>
+        <li>Видима промяна без рязка и неестествена трансформация</li>
+      </ul>
+
+      <p>
+        Процедурата се предлага с <strong>пакетна цена за целия курс</strong>,
+        което я прави по-достъпна и ефективна в дългосрочен план.
+      </p>
+
+      <p style="margin-top:16px">
+        <a class="cta" href="index.html#contact">👉 Запази консултация във Враца</a>
+      </p>
+    </section>
+
+    <aside class="card">
+      <h3 style="margin-top:0">Бърза информация</h3>
+      <p class="meta">Процедура: EMS + RF лифтинг</p>
+      <p class="meta">Препоръчителен курс: 6 процедури</p>
+      <p class="meta">Ценообразуване: пакетна цена</p>
+      <p class="meta">Неинвазивна • без възстановяване</p>
       <a class="cta" href="index.html#contact">Запази час</a>
     </aside>
-  </section>
 
-  <section class="related">
-    <h3>Свързани страници</h3>
-    <p class="muted">Разгледай още услуги и комбинирани терапии за по-силен краен резултат.</p>
-    <p><a href="services.html">← Всички процедури</a> · <a href="alternativa-na-botox-vratsa.html">Алтернатива на ботокс</a> · <a href="radiochestoten-lifting.html">Радиочестотен лифтинг</a></p>
-  </section>
+  </main>
+
+  <footer>
+    <div>© AUREN Beauty — Всички права запазени</div>
+    <div>
+      Враца • <a href="tel:+359880000000" style="color:inherit;text-decoration:none">+359 88 000 0000</a>
+    </div>
+  </footer>
+
 </div>
+
 </body>
 </html>
-
