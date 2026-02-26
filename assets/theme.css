@@ -1,0 +1,265 @@
+﻿/* ===== AUREN / LOVABLE THEME (STATIC HTML) ===== */
+
+/* Google fonts (same as Lovable) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  /* Convert HSL tokens from Lovable */
+  --background: hsl(30 20% 98%);
+  --foreground: hsl(220 20% 15%);
+
+  --card: hsl(30 15% 97%);
+  --card-foreground: hsl(220 20% 15%);
+
+  --muted: hsl(30 10% 94%);
+  --muted-foreground: hsl(220 10% 45%);
+
+  --border: hsl(30 15% 88%);
+  --ring: hsl(38 60% 55%);
+
+  --primary: hsl(38 60% 55%);
+  --primary-foreground: hsl(30 20% 98%);
+
+  --accent: hsl(38 45% 88%);
+  --accent-foreground: hsl(220 20% 15%);
+
+  --radius: 12px; /* Lovable had 0.5rem ~ 8px; here slightly more premium */
+  
+  /* Brand */
+  --gold: hsl(38 60% 55%);
+  --gold-dark: hsl(38 65% 40%);
+  --champagne: hsl(38 30% 90%);
+  --cream: hsl(30 20% 98%);
+  --charcoal: hsl(220 20% 15%);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, hsl(38 60% 55%), hsl(38 50% 65%));
+  --gradient-cream: linear-gradient(180deg, hsl(30 20% 98%), hsl(30 15% 94%));
+  --gradient-hero: linear-gradient(135deg, hsl(30 20% 98%) 0%, hsl(38 30% 95%) 50%, hsl(30 20% 98%) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -4px hsl(38 30% 50% / 0.15);
+  --shadow-elevated: 0 20px 40px -12px hsl(220 20% 15% / 0.12);
+  --shadow-glow: 0 0 40px -10px hsl(38 60% 55% / 0.3);
+
+  /* Layout */
+  --maxw: 1100px;
+}
+
+/* Base */
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6{
+  font-family:"Playfair Display", serif;
+  margin:0 0 10px;
+  letter-spacing: .2px;
+}
+
+p{ margin:0 0 14px; color: var(--foreground); }
+.lead{ color: var(--muted-foreground); max-width:75ch; font-size:1.05rem; }
+.muted{ color: var(--muted-foreground); }
+
+/* Links */
+a{ color: inherit; }
+a.link{
+  color: var(--gold-dark);
+  text-decoration:none;
+  font-weight:600;
+}
+a.link:hover{ text-decoration:underline; }
+
+/* Container */
+.container{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+/* Header / nav */
+header.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.header-inner{
+  max-width: var(--maxw);
+  margin:0 auto;
+  padding: 14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.logo{
+  width:44px;
+  height:44px;
+  border-radius: 12px;
+  background: var(--gradient-gold);
+  box-shadow: var(--shadow-soft);
+  display:grid;
+  place-items:center;
+  color: var(--primary-foreground);
+  font-weight:800;
+}
+
+.brand-title{
+  font-family:"Playfair Display", serif;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+.brand-sub{ font-size:12px; color: var(--muted-foreground); margin-top:2px; }
+
+nav.site-nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  font-weight:600;
+}
+nav.site-nav a{
+  text-decoration:none;
+  color: var(--muted-foreground);
+  padding:8px 10px;
+  border-radius: 10px;
+}
+nav.site-nav a:hover{
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+/* Hero */
+.hero{
+  background: var(--gradient-hero);
+  border:1px solid var(--border);
+  border-radius: calc(var(--radius) + 8px);
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+}
+
+.text-gradient-gold{
+  background: linear-gradient(135deg, hsl(38 60% 55%), hsl(38 45% 45%));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color: transparent;
+}
+
+.section-title{
+  margin-top: 26px;
+  font-size: 1.6rem;
+}
+
+/* Cards / grid */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items:start;
+  margin-top: 22px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 18px;
+}
+
+.card.white{
+  background:#fff;
+}
+
+.card h3{ margin:0 0 8px; }
+.card p{ margin:0; color: var(--muted-foreground); }
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  border:1px solid transparent;
+  font-weight:700;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background: var(--gradient-gold);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-glow);
+}
+.btn-primary:hover{ filter: brightness(.98); }
+
+.btn-outline{
+  background: rgba(255,255,255,.7);
+  border-color: var(--border);
+}
+.btn-outline:hover{ background: rgba(255,255,255,.95); }
+
+/* Forms */
+form{ display:flex; flex-direction:column; gap:10px; }
+label{ font-size:.92rem; font-weight:600; color: var(--foreground); }
+input, textarea, select{
+  width:100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border:1px solid var(--border);
+  background:#fff;
+  font: inherit;
+  outline:none;
+}
+input:focus, textarea:focus, select:focus{
+  box-shadow: 0 0 0 3px hsl(38 60% 55% / 0.20);
+  border-color: hsl(38 60% 55% / 0.55);
+}
+textarea{ min-height:110px; resize:vertical; }
+
+/* Footer */
+footer.site-footer{
+  margin-top: 60px;
+  border-top:1px solid var(--border);
+  padding: 18px 0;
+  color: var(--muted-foreground);
+}
+
+/* Responsive */
+@media(max-width: 920px){
+  .grid{ grid-template-columns: 1fr; }
+  nav.site-nav{ gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+  .hero{ padding: 22px; }
+}
