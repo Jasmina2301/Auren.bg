@@ -103,6 +103,10 @@
 }
 
 html { scroll-behavior: smooth; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
@@ -112,12 +116,15 @@ body {
   text-rendering: optimizeLegibility;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  font-synthesis: none;
+  font-kerning: normal;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Playfair Display', serif;
   margin: 0 0 10px;
   letter-spacing: .2px;
+  font-weight: 600;
 }
 
 p { margin: 0 0 14px; color: hsl(var(--foreground)); }
@@ -148,10 +155,15 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.86);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid hsl(var(--border));
+}
+
+/* If header is placed inside .container, stretch it edge-to-edge like standalone pages */
+.container > header.site-header {
+  margin: -28px -24px 24px;
 }
 
 .header-inner {
@@ -200,9 +212,14 @@ nav.site-nav {
   gap: 18px;
   align-items: center;
   font-weight: 600;
+  margin-left: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
 }
 
 .menu-toggle {
+  appearance: none;
+  -webkit-appearance: none;
   display: none;
   align-items: center;
   justify-content: center;
@@ -215,6 +232,17 @@ nav.site-nav {
   cursor: pointer;
   font-size: 1.15rem;
   line-height: 1;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
 }
 
 nav.site-nav a {
@@ -231,17 +259,24 @@ nav.site-nav a:hover {
   color: hsl(var(--foreground));
 }
 
-/* Top-right CTA in desktop nav (Book Consultation style) */
-nav.site-nav a:last-child {
-  margin-left: 8px;
-  padding: 14px 24px;
-  border-radius: 12px;
-  background: hsl(var(--gold) / .65);
-  color: hsl(var(--charcoal));
-  font-weight: 700;
-}
-nav.site-nav a:last-child:hover {
-  background: hsl(var(--gold) / .78);
+/* Desktop CTA nav button ("Консултация") */
+@media (min-width: 921px) {
+  nav.site-nav a[href="#contact"],
+  nav.site-nav a[href="index.html#contact"] {
+    margin-left: 10px;
+    padding: 14px 30px;
+    border-radius: 16px;
+    background: hsl(var(--gold) / .68);
+    color: hsl(var(--charcoal));
+    font-weight: 700;
+    border: 1px solid hsl(var(--gold) / .78);
+    flex: 0 0 auto;
+  }
+
+  nav.site-nav a[href="#contact"]:hover,
+  nav.site-nav a[href="index.html#contact"]:hover {
+    background: hsl(var(--gold) / .80);
+  }
 }
 
 /* Fallback for pages that still use plain header/nav markup */
@@ -365,6 +400,8 @@ header:not(.site-header) nav a:hover {
 
 .btn,
 .cta {
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -483,6 +520,15 @@ footer:not(.site-footer) {
   -webkit-backdrop-filter: blur(12px);
 }
 
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  header.site-header {
+    background: rgba(255,255,255,.97);
+  }
+  .glass {
+    background: rgba(255,255,255,.92);
+  }
+}
+
 @media (max-width: 920px) {
   .grid { grid-template-columns: 1fr; }
   .menu-toggle { display: inline-flex; }
@@ -501,25 +547,35 @@ footer:not(.site-footer) {
   }
   nav.site-nav.is-open { display: flex; }
   nav.site-nav a { width: 100%; }
-  nav.site-nav a:last-child {
+  nav.site-nav a[href="#contact"],
+  nav.site-nav a[href="index.html#contact"] {
     margin-left: 0;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border-radius: 10px;
+    border: 0;
     background: transparent;
     color: hsl(var(--muted-foreground));
     font-weight: 600;
-  }
-  nav.site-nav a:last-child:hover {
-    background: hsl(var(--muted));
-    color: hsl(var(--foreground));
   }
   .hero { padding: 22px; }
   .container > header:not(.site-header),
   header:not(.site-header) { flex-direction: column; align-items: flex-start; }
   .container > header:not(.site-header) nav,
   header:not(.site-header) nav { width: 100%; }
+  .container > header.site-header {
+    margin: -18px -14px 18px;
+  }
   .btn, .btn-primary, .btn-outline, .cta, .cta-button {
     width: 100%;
     max-width: 360px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 921px) {
+  .header-inner { gap: 10px; }
+  nav.site-nav { gap: 10px; }
+  nav.site-nav a {
+    padding: 7px 8px;
+    font-size: .98rem;
   }
 }
