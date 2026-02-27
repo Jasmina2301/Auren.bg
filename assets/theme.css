@@ -339,11 +339,50 @@ header:not(.site-header) nav a:hover {
 }
 
 .hero.services-hero {
-  background-image:
-    linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 45%, rgba(255,255,255,.55) 70%, rgba(255,255,255,.38) 100%),
-    url("services-hero.png");
+  height: 92vh;
+  min-height: 640px;
+  background-image: url("services-hero.png?v=20260226");
   background-size: cover;
-  background-position: center;
+  background-position: center right;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20,22,25,0.65) 0%,
+    rgba(20,22,25,0.45) 35%,
+    rgba(20,22,25,0.1) 70%,
+    rgba(20,22,25,0) 100%
+  );
+}
+
+.hero.services-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero.services-hero h1,
+.hero.services-hero p {
+  color: #fff;
+  max-width: 640px;
+}
+
+.hero.services-hero .pill {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+
+.hero.services-hero .pill:hover {
+  background: rgba(255,255,255,.24);
+  border-color: rgba(255,255,255,.55);
 }
 
 .section-title {
@@ -593,10 +632,17 @@ footer:not(.site-footer) {
       var(--gradient-hero);
   }
   .hero.services-hero {
-    background-image:
-      linear-gradient(180deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.8) 50%, rgba(255,255,255,.68) 100%),
-      url("services-hero.png");
-    background-position: center;
+    height: auto;
+    min-height: 460px;
+    background-position: 62% center;
+  }
+  .hero.services-hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(20,22,25,0.62) 0%,
+      rgba(20,22,25,0.34) 55%,
+      rgba(20,22,25,0.18) 100%
+    );
   }
   .container > header:not(.site-header),
   header:not(.site-header) { flex-direction: column; align-items: flex-start; }
