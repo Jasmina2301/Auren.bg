@@ -40,6 +40,13 @@ img{max-width:100%;height:auto;display:block}
   padding: 0 20px;
 }
 
+/* Compatibility for pages using .container instead of .wrap */
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding: 0 20px;
+}
+
 .display{font-family:"Playfair Display",serif; letter-spacing:.2px}
 h1,h2,h3{font-family:"Playfair Display",serif; margin:0}
 p{margin:0}
@@ -59,6 +66,8 @@ p{margin:0}
   justify-content:space-between;
   gap:18px;
   padding: 14px 0;
+  max-width: var(--maxw);
+  margin: 0 auto;
 }
 
 .brand{
@@ -94,6 +103,31 @@ p{margin:0}
 .nav a:hover{color:var(--text)}
 .nav .active{color:var(--text)}
 
+/* Compatibility nav used in index and some older pages */
+.site-nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.site-nav a{
+  text-decoration:none;
+  color: var(--muted);
+  font-weight:700;
+}
+.site-nav a:hover{color:var(--text)}
+
+.menu-toggle{
+  display:none;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#fff;
+  font-size:1.1rem;
+}
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -122,6 +156,36 @@ p{margin:0}
 .hero{
   position:relative;
   margin: 18px auto 0;
+}
+
+/* Compatibility hero for index */
+.hero-photo{
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.25);
+  min-height: 460px;
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,.60), rgba(0,0,0,.24) 45%, rgba(0,0,0,.08) 70%),
+    url("assets/hero.jpg");
+  background-size: cover;
+  background-position: center right;
+  display:flex;
+  align-items:center;
+}
+.hero-content{
+  max-width: 720px;
+  padding: 42px 34px;
+}
+.hero-photo h1{
+  color:#fff;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  margin-bottom: 14px;
+}
+.hero-photo p{
+  color: rgba(255,255,255,.92);
+  font-size: 1.05rem;
+  margin-bottom: 12px;
 }
 .hero--image{
   border-radius: 26px;
@@ -207,6 +271,13 @@ p{margin:0}
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
+
+/* Compatibility grid used in index sections */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
 .card{
   background: var(--card);
   border: 1px solid rgba(22,24,28,.08);
@@ -227,6 +298,39 @@ p{margin:0}
   text-decoration:none;
 }
 .link:hover{text-decoration:underline}
+
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid transparent;
+  white-space:nowrap;
+  background: rgba(185,138,115,.45);
+  color:#fff;
+}
+.cta-button:hover{background: rgba(185,138,115,.62);}
+
+.cta-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.cta.secondary{
+  background: rgba(255,255,255,.55);
+  border-color: rgba(22,24,28,.10);
+  color: var(--text);
+}
+.cta.secondary:hover{background:#fff}
+
+.contact{
+  padding: 28px 0 10px;
+}
 
 .cta-band{
   margin: 18px 0 0;
@@ -256,6 +360,11 @@ p{margin:0}
   flex-wrap:wrap;
   color: var(--muted);
 }
+.site-footer > div{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 16px 20px;
+}
 .site-footer a{color:inherit;text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
 
@@ -263,12 +372,31 @@ p{margin:0}
   .hero-grid{grid-template-columns: 1fr; }
   .hero-pills{justify-content:flex-start}
   .section-head{flex-direction:column; align-items:flex-start}
+  .hero-photo{
+    min-height: 400px;
+    background-position: 62% center;
+  }
+  .hero-content{padding: 28px 22px;}
+  .site-nav{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+    margin-top:8px;
+    padding-top:8px;
+  }
+  .site-nav.is-open{display:flex;}
+  .menu-toggle{display:inline-block;}
 }
 
 @media (max-width: 640px){
   .wrap{padding:0 14px}
+  .container{padding:0 14px}
   .nav{gap:10px}
+  .site-nav{gap:10px}
   .btn{width:100%}
+  .cta-button{width:100%}
   .cta-actions{width:100%}
   .cta-actions .btn{flex:1}
   .hero-inner{padding: 34px 0}
