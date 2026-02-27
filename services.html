@@ -1,156 +1,127 @@
 ﻿<!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Процедури | AUREN Beauty</title>
-  <meta name="description" content="Всички процедури в AUREN Beauty Враца: анализ, акне терапии, anti-age и регенерация.">
-
-  <link rel="stylesheet" href="assets/theme.css?v=20260226">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Процедури | AUREN Beauty – Враца</title>
+  <meta name="description" content="Всички процедури в AUREN Beauty Враца: Skin Check, кислородна хидротерапия, лечение на акне, Face Contour Architect и допълващи терапии." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-  <!-- Header -->
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">
-        <div class="logo">A</div>
-        <div>
-          <div class="brand-title">AUREN Beauty</div>
-          <div class="brand-sub">Професионална грижа за кожата във Враца</div>
-        </div>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="AUREN Beauty">
+        <span class="logo">A</span>
+        <span class="brand-text">
+          <span class="brand-title">AUREN Beauty</span>
+          <span class="brand-sub">Професионална грижа за кожата • Враца</span>
+        </span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false">&#9776;</button>
-      <nav class="site-nav" aria-label="Главно меню">
+      <nav class="nav" aria-label="Главно меню">
         <a href="index.html">Начало</a>
-        <a href="services.html">Процедури</a>
-        <a href="index.html#contact">Запази консултация</a>
+        <a class="active" href="services.html">Процедури</a>
+        <a class="btn btn-primary" href="index.html#contact">Запази консултация</a>
       </nav>
     </div>
   </header>
 
-  <div class="container">
+  <!-- HERO (Lovable-style) -->
+  <section class="hero hero--image">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="images/hero-services.jpg" alt="" />
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-    <!-- Page intro / hero -->
-    <section class="hero services-hero" aria-labelledby="page-title">
-      <h1 id="page-title">Процедури</h1>
-      <p class="lead">
-        Подбрани терапии, които комбинират диагностика, персонализиран подход и неинвазивни технологии
-        за видимо по-здрава и балансирана кожа.
-      </p>
+    <div class="wrap hero-inner hero-grid">
+      <!-- Left: Title + text -->
+      <div class="hero-copy">
+        <p class="eyebrow">Подбрани терапии</p>
+        <h1 class="display">Процедури</h1>
+        <p class="lead">
+          Подбрани терапии, които комбинират диагностика, персонализиран подход и
+          неинвазивни технологии за видимо по-здрава и балансирана кожа.
+        </p>
+      </div>
 
-      <div class="pill-row" aria-label="Основни теми">
+      <!-- Right: Pill links -->
+      <div class="hero-pills" aria-label="Основни теми">
         <a class="pill" href="alternativa-na-botox-vratsa.html">Алтернатива на ботокс</a>
         <a class="pill" href="lechenie-na-akne-vraca.html">Лечение на акне</a>
         <a class="pill" href="skincheck-analiz-na-kozha.html">Skin Check</a>
-        <a class="pill" href="pdrn-salmon-dna-terapiya.html">PDRN / Salmon DNA</a>
-        <a class="pill" href="exosome-terapiya.html">EXOSOME Therapy</a>
+        <a class="pill" href="kislorodna-hidroterapiya.html">Кислородна хидротерапия</a>
+        <a class="pill" href="face-contour-architect.html">Face Contour Architect</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sections -->
-    <section class="mt-22">
-      <h2 class="section-title">Основни терапии</h2>
+  <main class="wrap section">
+    <section class="section">
+      <div class="section-head">
+        <h2>Основни терапии</h2>
+        <p class="muted">Тук са 3-те ядра на сайта – анализ, дълбоко почистване/хидратация и лифтинг.</p>
+      </div>
+
       <div class="cards">
         <article class="card">
-          <h3>Skin Check - Анализ на кожата</h3>
-          <p>Обективна оценка и проследяване на състоянието на кожата.</p>
+          <h3>Skin Check – Анализ на кожата</h3>
+          <p>Обективна оценка и проследяване на състоянието на кожата във времето.</p>
           <a class="link" href="skincheck-analiz-na-kozha.html">Отвори страницата →</a>
         </article>
 
         <article class="card">
           <h3>Кислородна хидротерапия</h3>
-          <p>Нежно почистване, хидратация и освежаване на тена.</p>
+          <p>Нежно почистване, хидратация и освежаване на тена. Подходяща за всеки тип кожа.</p>
           <a class="link" href="kislorodna-hidroterapiya.html">Отвори страницата →</a>
         </article>
 
         <article class="card">
           <h3>Face Contour Architect</h3>
-          <p>EMS + RF лифтинг за стегнат контур без инжекции.</p>
+          <p>EMS + RF лифтинг за стегнат контур без инжекции. Препоръчителен курс от 6 процедури.</p>
           <a class="link" href="face-contour-architect.html">Отвори страницата →</a>
         </article>
       </div>
     </section>
 
-    <section class="mt-22">
-      <h2 class="section-title">Акне и проблемна кожа</h2>
+    <section class="section">
+      <div class="section-head">
+        <h2>Акне и проблемна кожа</h2>
+        <p class="muted">Комбиниран подход според състоянието на кожата и целите.</p>
+      </div>
+
       <div class="cards">
         <article class="card">
           <h3>Лечение на акне</h3>
-          <p>Персонален протокол за контрол на възпаленията и себума.</p>
+          <p>Персонален протокол за контрол на възпаленията и себума + домашна грижа.</p>
           <a class="link" href="lechenie-na-akne-vraca.html">Отвори страницата →</a>
         </article>
 
         <article class="card">
           <h3>Озонотерапия + PDT</h3>
-          <p>Антибактериален подход за активни лезии и зачервяване.</p>
+          <p>Антибактериален и успокояващ подход при активни лезии (като част от курс).</p>
           <a class="link" href="ozon-pdt-terapiya-akne.html">Отвори страницата →</a>
         </article>
       </div>
     </section>
 
-    <section class="mt-22">
-      <h2 class="section-title">Текстура, тонус и блясък</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Медицинско почистване</h3>
-          <p>Дълбоко почистване при комедони, запушени пори и мазна кожа.</p>
-          <a class="link" href="pochistvane-na-litse-vratsa.html">Отвори страницата →</a>
-        </article>
-
-        <article class="card">
-          <h3>Химичен пилинг</h3>
-          <p>Изравняване на тена, по-фина текстура и свеж вид на кожата.</p>
-          <a class="link" href="himichen-piling.html">Отвори страницата →</a>
-        </article>
-
-        <article class="card">
-          <h3>Мезотерапия / Биоревитализация</h3>
-          <p>Интензивна хидратация и стимулиране на естествената регенерация.</p>
-          <a class="link" href="mezoterapiya-biorevitalizatsiya.html">Отвори страницата →</a>
-        </article>
-
-        <article class="card">
-          <h3>PDRN / Salmon DNA</h3>
-          <p>Клетъчно възстановяване, anti-age ефект и подобрена еластичност.</p>
-          <a class="link" href="pdrn-salmon-dna-terapiya.html">Отвори страницата →</a>
-        </article>
-
-        <article class="card">
-          <h3>EXOSOME Therapy</h3>
-          <p>Микронидлинг + екзозомен серум за „glass skin“ ефект.</p>
-          <a class="link" href="exosome-terapiya.html">Отвори страницата →</a>
-        </article>
-
-        <article class="card">
-          <h3>Радиочестотен лифтинг</h3>
-          <p>Неинвазивно стягане на кожата и редуциране на фини линии.</p>
-          <a class="link" href="radiochestoten-lifting.html">Отвори страницата →</a>
-        </article>
+    <section class="cta-band">
+      <div>
+        <h2>Запази консултация</h2>
+        <p class="muted">Ще започнем с анализ и ще изберем най-точната терапия за твоята кожа.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="index.html#contact">Запази консултация</a>
+        <a class="btn btn-ghost" href="tel:+359880000000">+359 88 000 0000</a>
       </div>
     </section>
+  </main>
 
-    <!-- CTA -->
-    <section class="mt-22">
-      <a class="btn btn-primary" href="index.html#contact">Запази час</a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-row">
-        <div>© AUREN Beauty</div>
-        <div>Враца • <a class="link" href="tel:+359880000000">+359 88 000 0000</a></div>
-      </div>
-    </footer>
-
-  </div>
-
-  <script src="assets/mobile-menu.js?v=20260226"></script>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© AUREN Beauty — Всички права запазени</div>
+      <div>Враца • <a href="tel:+359880000000">+359 88 000 0000</a></div>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
