@@ -53,40 +53,76 @@ p{margin:0}
 .muted{color:var(--muted)}
 
 .site-header{
-  position:sticky;
+  position:absolute;
   top:0;
-  z-index:10;
-  background: rgba(255,255,255,.75);
+  left:0;
+  width:100%;
+  padding:18px 40px;
+  z-index:50;
+  background:rgba(255,255,255,0.35);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(22,24,28,.06);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.25);
 }
 .header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:18px;
-  padding: 14px 0;
+  gap:24px;
+  padding:0;
   max-width: var(--maxw);
   margin: 0 auto;
 }
 
+/*
+  legacy block retained below intentionally removed:
+  .header-inner old spacing replaced to match requested header setup
+*/
+
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
   text-decoration:none;
   min-width:0;
 }
 .logo{
-  width:44px;height:44px;border-radius:14px;
-  background: linear-gradient(145deg,#fae4d5,#efc7b4);
-  display:grid;place-items:center;
-  font-weight:900;
-  color:#5f3324;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  padding:4px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow: var(--shadow-soft);
+  background: rgba(255,255,255,.92);
+  border:1px solid rgba(22,24,28,.10);
+  flex:0 0 48px;
+}
+.logo-img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  border-radius:8px;
+  background:#fff;
+  mix-blend-mode:normal;
+  filter:none;
 }
 .brand-text{display:flex;flex-direction:column;min-width:0}
-.brand-title{font-weight:900; letter-spacing:.4px}
-.brand-sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-title{
+  font-weight:700;
+  letter-spacing:1px;
+  font-size:18px;
+}
+.brand-sub{
+  font-size:12px;
+  color:rgba(0,0,0,0.55);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
 
 .nav{
   display:flex;
@@ -155,7 +191,30 @@ p{margin:0}
 
 .hero{
   position:relative;
-  margin: 18px auto 0;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  padding:120px 60px 80px;
+  color:white;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(20,20,20,.65) 0%,
+    rgba(20,20,20,.35) 40%,
+    rgba(20,20,20,.05) 75%,
+    rgba(20,20,20,0) 100%
+  );
+  z-index:0;
+}
+
+.hero > *{
+  position:relative;
+  z-index:2;
 }
 
 /* Compatibility hero for index */
@@ -403,3 +462,20 @@ p{margin:0}
 }
 
 .mt-14{margin-top:14px}
+
+
+
+
+
+
+.brand > .logo-img{
+  height: 36px;
+  width:auto;
+  max-width:200px;
+  object-fit:contain;
+  background:transparent;
+  border-radius:0;
+  flex:0 0 auto;
+}
+
+
