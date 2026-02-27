@@ -153,11 +153,13 @@ p{margin:0}
   white-space:nowrap;
 }
 .btn-primary{
-  background: rgba(185,138,115,.35);
-  border-color: rgba(185,138,115,.35);
+  background: var(--accent);
+  border-color: var(--accent);
+  color:#fff;
 }
 .btn-primary:hover{
-  background: rgba(185,138,115,.48);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
 }
 .btn-ghost{
   background: rgba(255,255,255,.55);
@@ -343,12 +345,15 @@ p{margin:0}
   border-radius: 14px;
   text-decoration:none;
   font-weight:800;
-  border:1px solid transparent;
+  border:1px solid var(--accent);
   white-space:nowrap;
-  background: rgba(185,138,115,.45);
+  background: var(--accent);
   color:#fff;
 }
-.cta-button:hover{background: rgba(185,138,115,.62);}
+.cta-button:hover{
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
 
 .cta-row{
   display:flex;
@@ -404,14 +409,26 @@ p{margin:0}
 .site-footer a:hover{text-decoration:underline}
 
 @media (max-width: 880px){
-  .hero-grid{grid-template-columns: 1fr; }
+  .site-header{padding:12px 16px;}
+  .header-inner{flex-wrap:wrap; gap:10px 14px; align-items:flex-start;}
+  .brand{flex:1 1 100%;}
+  .nav{width:100%; justify-content:flex-start; gap:12px 16px;}
+  .nav a{padding:6px 0;}
+  .nav .btn{margin-left:0;}
+
+  .hero{min-height:78vh; padding:110px 24px 56px;}
+  .hero .display{font-size:clamp(1.9rem, 7.5vw, 2.8rem);}
+
+  .hero-grid{grid-template-columns:1fr;}
   .hero-pills{justify-content:flex-start}
   .section-head{flex-direction:column; align-items:flex-start}
+
   .hero-photo{
     min-height: 400px;
     background-position: 62% center;
   }
-  .hero-content{padding: 28px 22px;}
+  .hero-content{padding:28px 22px;}
+
   .site-nav{
     display:none;
     width:100%;
@@ -428,31 +445,42 @@ p{margin:0}
 @media (max-width: 640px){
   .wrap{padding:0 14px}
   .container{padding:0 14px}
-  .nav{gap:10px}
+  .site-header{padding:10px 12px;}
+
+  .nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px 12px;
+    width:100%;
+    align-items:stretch;
+  }
+  .nav a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:8px 10px;
+  }
+  .nav .btn{
+    grid-column:1 / -1;
+    width:100%;
+  }
+
   .site-nav{gap:10px}
-  .btn{width:100%}
+
+  .btn{width:auto}
   .cta-button{width:100%}
   .cta-actions{width:100%}
-  .cta-actions .btn{flex:1}
-  .hero-inner{padding: 34px 0}
+  .cta-actions .btn{flex:1 1 100%}
+
+  .hero{padding:98px 16px 42px; min-height:72vh;}
+  .hero-inner{padding:26px 0}
+  .hero .lead{font-size:1rem;}
+  .hero-pills{gap:8px;}
+  .pill{padding:8px 12px; font-size:.92rem;}
 }
 
 .mt-14{margin-top:14px}
-
-
-
-
-
-
-.brand > .logo-img{
-  height: 36px;
-  width:auto;
-  max-width:200px;
-  object-fit:contain;
-  background:transparent;
-  border-radius:0;
-  flex:0 0 auto;
-}
 
 
 
