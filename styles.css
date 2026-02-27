@@ -86,30 +86,6 @@ p{margin:0}
   text-decoration:none;
   min-width:0;
 }
-.logo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:48px;
-  height:48px;
-  padding:4px;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow: var(--shadow-soft);
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(22,24,28,.10);
-  flex:0 0 48px;
-}
-.logo-img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-  border-radius:8px;
-  background:#fff;
-  mix-blend-mode:normal;
-  filter:none;
-}
 .brand-text{display:flex;flex-direction:column;min-width:0}
 .brand-title{
   font-weight:700;
@@ -477,5 +453,6 @@ p{margin:0}
   border-radius:0;
   flex:0 0 auto;
 }
+
 
 
