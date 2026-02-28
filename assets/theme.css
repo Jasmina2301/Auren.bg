@@ -32,9 +32,9 @@
 
   --radius: 0.5rem;
 
-  --gold: 38 60% 55%;
-  --gold-light: 38 50% 75%;
-  --gold-dark: 38 65% 40%;
+  --gold: 40 60% 70%;
+  --gold-light: 40 62% 78%;
+  --gold-dark: 40 45% 55%;
   --champagne: 38 30% 90%;
   --charcoal: 220 20% 15%;
   --charcoal-light: 220 15% 25%;
@@ -91,8 +91,8 @@
   --input: 220 15% 20%;
   --ring: 38 55% 50%;
 
-  --gold: 38 55% 50%;
-  --gold-light: 38 45% 60%;
+  --gold: 40 60% 70%;
+  --gold-light: 40 62% 78%;
   --charcoal: 30 15% 95%;
   --cream: 220 20% 8%;
 }
@@ -232,18 +232,43 @@ button {
   color: inherit;
 }
 
-nav.site-nav a {
-  text-decoration: none;
-  color: hsl(var(--muted-foreground));
+nav.site-nav a{
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+  font-weight:500;
+  letter-spacing:.4px;
+  position:relative;
+  transition:.25s;
   padding: 8px 10px;
   border-radius: 10px;
   font-size: 1.05rem;
-  font-weight: 600;
 }
 
-nav.site-nav a:hover {
-  background: hsl(var(--muted));
-  color: hsl(var(--foreground));
+nav.site-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:var(--gold);
+  transition:.25s;
+}
+
+nav.site-nav a:hover{
+  color:white;
+}
+
+nav.site-nav a:hover::after{
+  width:100%;
+}
+
+nav.site-nav a.active{
+  color:white;
+}
+
+nav.site-nav a.active::after{
+  width:100%;
 }
 
 /* Desktop CTA nav button ("Консултация") */
@@ -253,16 +278,16 @@ nav.site-nav a:hover {
     margin-left: 10px;
     padding: 14px 30px;
     border-radius: 16px;
-    background: hsl(var(--gold) / .68);
+    background: #E0BE83;
     color: hsl(var(--charcoal));
     font-weight: 700;
-    border: 1px solid hsl(var(--gold) / .78);
+    border: 1px solid #E0BE83;
     flex: 0 0 auto;
   }
 
   nav.site-nav a[href="#contact"]:hover,
   nav.site-nav a[href="index.html#contact"]:hover {
-    background: hsl(var(--gold) / .80);
+    background: #cfad72;
   }
 }
 
@@ -287,16 +312,46 @@ header:not(.site-header) nav {
 
 .container > header:not(.site-header) nav a,
 header:not(.site-header) nav a {
-  text-decoration: none;
-  color: hsl(var(--muted-foreground));
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+  font-weight:500;
+  letter-spacing:.4px;
+  position:relative;
+  transition:.25s;
   padding: 8px 10px;
   border-radius: 10px;
 }
 
+.container > header:not(.site-header) nav a::after,
+header:not(.site-header) nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:var(--gold);
+  transition:.25s;
+}
+
 .container > header:not(.site-header) nav a:hover,
-header:not(.site-header) nav a:hover {
-  background: hsl(var(--muted));
-  color: hsl(var(--foreground));
+header:not(.site-header) nav a:hover{
+  color:white;
+}
+
+.container > header:not(.site-header) nav a:hover::after,
+header:not(.site-header) nav a:hover::after{
+  width:100%;
+}
+
+.container > header:not(.site-header) nav a.active,
+header:not(.site-header) nav a.active{
+  color:white;
+}
+
+.container > header:not(.site-header) nav a.active::after,
+header:not(.site-header) nav a.active::after{
+  width:100%;
 }
 
 .hero {
@@ -471,21 +526,16 @@ header:not(.site-header) nav a:hover {
 
 .btn-primary,
 .cta {
-  background: hsl(var(--gold) / .7);
+  background: #E0BE83;
   color: hsl(var(--charcoal));
   box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover,
-.cta:hover { background: hsl(var(--gold) / .82); }
-
-.btn-outline {
-  background: rgba(255,255,255,.9);
-  border-color: hsl(var(--gold) / .9);
-  color: hsl(var(--charcoal));
+.cta:hover {
+  background: #cfad72;
 }
 
-.btn-outline:hover { background: #fff; }
 
 /* Home page legacy button class support */
 .cta-button { 
@@ -496,7 +546,7 @@ header:not(.site-header) nav a:hover {
   padding: 16px 30px;
   border-radius: 14px;
   border: 2px solid transparent;
-  background: hsl(var(--gold) / .7);
+  background: #E0BE83;
   color: hsl(var(--charcoal));
   text-decoration: none;
   font-weight: 700;
@@ -504,7 +554,9 @@ header:not(.site-header) nav a:hover {
   line-height: 1.1;
   box-shadow: var(--shadow-soft);
 }
-.cta-button:hover { background: hsl(var(--gold) / .82); }
+.cta-button:hover {
+  background: #cfad72;
+}
 
 .cta-row {
   display: flex;
@@ -512,12 +564,19 @@ header:not(.site-header) nav a:hover {
   gap: 14px;
   margin-top: 16px;
 }
-.cta.secondary {
-  background: rgba(255,255,255,.9);
-  border-color: hsl(var(--gold) / .9);
-  color: hsl(var(--charcoal));
+.cta.secondary,
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
-.cta.secondary:hover { background: #fff; }
+.cta.secondary:hover,
+.btn-outline:hover {
+  background: rgba(255,255,255,.15);
+  border-color: white;
+}
 
 form { display: flex; flex-direction: column; gap: 10px; }
 label { font-size: .92rem; font-weight: 600; color: hsl(var(--foreground)); }
@@ -667,6 +726,7 @@ footer:not(.site-footer) {
   border-radius:0;
   flex:0 0 auto;
 }
+
 
 
 
