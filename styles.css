@@ -470,15 +470,48 @@ p{margin:0}
 .site-footer a:hover{text-decoration:underline}
 
 @media (max-width: 880px){
-  .site-header{padding:12px 16px;}
-  .header-inner{flex-wrap:wrap; gap:10px 14px; align-items:flex-start;}
+  .site-header{
+    position: sticky;
+    top: 0;
+    padding:12px 16px;
+    background: rgba(24,24,24,.42);
+    border-bottom:1px solid rgba(255,255,255,.2);
+  }
+  .header-inner{flex-wrap:wrap; gap:10px 14px; align-items:center;}
   .brand{flex:1 1 100%;}
-  .nav{width:100%; justify-content:flex-start; gap:12px 16px;}
-  .nav a{padding:6px 0;}
+  .brand-title{color:#fff;}
+  .brand-sub{color:rgba(255,255,255,.82);}
+  .nav,
+  .site-nav{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px 12px;
+    align-items:stretch;
+    margin-top:4px;
+  }
+  .nav a,
+  .site-nav a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:8px 10px;
+  }
+  .nav a::after,
+  .site-nav a::after{
+    bottom: 3px;
+  }
   .nav .btn{margin-left:0;}
+  .site-nav a[href="#contact"],
+  .site-nav a[href="index.html#contact"],
+  .nav .btn{
+    grid-column:1 / -1;
+    width:100%;
+  }
 
-  .hero{min-height:78vh; padding:110px 24px 56px;}
-  .hero .display{font-size:clamp(1.9rem, 7.5vw, 2.8rem);}
+  .hero{min-height:72vh; padding:42px 24px 48px;}
+  .hero .display{font-size:clamp(1.8rem, 6.8vw, 2.4rem); line-height:1.15;}
 
   .hero-grid{grid-template-columns:1fr;}
   .hero-pills{justify-content:flex-start}
@@ -490,51 +523,27 @@ p{margin:0}
   }
   .hero-content{padding:28px 22px;}
 
-  .site-nav{
-    display:none;
-    width:100%;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:8px;
-    margin-top:8px;
-    padding-top:8px;
-  }
-  .site-nav.is-open{display:flex;}
-  .menu-toggle{display:inline-block;}
+  .site-nav{gap:8px;}
+  .site-nav.is-open{display:grid;}
+  .menu-toggle{display:none;}
 }
 
 @media (max-width: 640px){
   .wrap{padding:0 14px}
   .container{padding:0 14px}
   .site-header{padding:10px 12px;}
-
-  .nav{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px 12px;
-    width:100%;
-    align-items:stretch;
-  }
-  .nav a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:42px;
-    padding:8px 10px;
-  }
-  .nav .btn{
-    grid-column:1 / -1;
-    width:100%;
-  }
-
-  .site-nav{gap:10px}
+  .header-inner{gap:8px 10px;}
+  .site-nav,
+  .nav{gap:8px 10px;}
+  .site-nav a,
+  .nav a{font-size:1rem;}
 
   .btn{width:auto}
   .cta-button{width:100%}
   .cta-actions{width:100%}
   .cta-actions .btn{flex:1 1 100%}
 
-  .hero{padding:98px 16px 42px; min-height:72vh;}
+  .hero{padding:32px 16px 42px; min-height:68vh;}
   .hero-inner{padding:26px 0}
   .hero .lead{font-size:1rem;}
   .hero-pills{gap:8px;}
